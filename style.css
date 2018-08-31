@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+}
+
+#stl-container {
+  width: 700px;
+  height: 700px;
+  margin: 0 auto;
+  border: solid 1px grey;
+  margin-bottom: 30px;
+}
+
+h6 {
+  padding-left: 60px;
+}
+
+h6,
+#volume-output,
+#area-output {
+  display: inline-block;
+}

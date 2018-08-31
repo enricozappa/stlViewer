@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>STL Picker for 3D Print srl</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+      <div id="stl-container"></div>
+      
+      <input type="file" onchange='stl_viewer.add_model({local_file:this.files[0]});' accept=".stl">
+      
+      <button id="volume-button" type="button">Calculate Volume</button>
+      <button id="area-button" type="button">Calculate Area</button>
+
+      <div>
+        <h6>Volume:</h6>
+        <p id="volume-output"></p>
+        <h6>Area:</h6>
+        <p id="area-output"></p>
+      </div>
+
+      <script src="stl_viewer.min.js"></script>
+      <script src="script.js"></script>
+      
+    </body>
+</html>

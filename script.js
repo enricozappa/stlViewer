@@ -15,7 +15,7 @@ function loadFile(file) {
 
 function calculateVolume() {
   var volume = stl_viewer.get_model_info(1).volume;
-  document.getElementById("volume-output").innerHTML = Math.round(volume * 100) / 100 + " cm3";
+  document.getElementById("volume-output").innerHTML = Math.round(volume * 100) / 100 + " cm&sup3";
 }
 
 function calculateSize() {

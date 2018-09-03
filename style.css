@@ -10,12 +10,16 @@ body {
   margin-bottom: 30px;
 }
 
-h6 {
-  padding-left: 60px;
+h5 {
+  padding-left: 50px;
 }
 
-h6,
+h5,
 #volume-output,
-#area-output {
+ul {
   display: inline-block;
+}
+
+ul {
+  list-style-type: none;
 }

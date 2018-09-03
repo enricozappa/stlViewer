@@ -1,6 +1,9 @@
 var stl_viewer = new StlViewer(document.getElementById("stl-container"));
 var volumeButton = document.getElementById("volume-button");
-var areaButton = document.getElementById("area-button");
+var sizeButton = document.getElementById("size-button");
+var xSize = document.getElementById("x-size");
+var ySize = document.getElementById("y-size");
+var zSize = document.getElementById("z-size");
 
 function loadFile(file) {
   stl_viewer.clean();
@@ -11,14 +14,15 @@ function loadFile(file) {
 }
 
 function calculateVolume() {
-  var volume = JSON.stringify(stl_viewer.get_model_info(1).volume);
-  document.getElementById("volume-output").innerHTML = volume;
+  var volume = stl_viewer.get_model_info(1).volume;
+  document.getElementById("volume-output").innerHTML = Math.round(volume * 100) / 100 + " cm3";
 }
 
-function calculateArea() {
-  var area = JSON.stringify(stl_viewer.get_model_info(1).area);
-  document.getElementById("area-output").innerHTML = area;
+function calculateSize() {
+  xSize.innerHTML = "x: " + Math.round(stl_viewer.get_model_mesh(1).geometry.maxx * 100) / 100 + "cm" ;
+  ySize.innerHTML = "y: " + Math.round(stl_viewer.get_model_mesh(1).geometry.maxy * 100) / 100 + "cm" ;
+  zSize.innerHTML = "z: " + Math.round(stl_viewer.get_model_mesh(1).geometry.maxz * 100) / 100 + "cm" ;
 }
 
 volumeButton.addEventListener("click", calculateVolume);
-areaButton.addEventListener("click", calculateArea);
+sizeButton.addEventListener("click", calculateSize);

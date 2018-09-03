@@ -1,4 +1,4 @@
-This is a simple web page that render .stl objects. You can calculate volume and area of loaded file.
+This is a simple web page that render .stl objects. You can calculate volume and size of loaded file.
 
 Due to his poor performances, it is better to upload files that do not exceed 2 or 3 megabytes.
 
